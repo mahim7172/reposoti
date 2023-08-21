@@ -17,8 +17,26 @@ function clickElementValue(target) {
   
   const product = (document.getElementById("product-price").innerText =
   total);
-  if(product < 200){
-    discounPrice + 1
+  
+    
+  if(product>200){
+    
+    const discountPrice = totalPrice / 100;
+      const discount = discountPrice * 20;
+      const discountTotal = (document.getElementById("discount-price").innerText =
+        discount);
+        const productPrice = total - discountTotal.toFixed(3);
+        const product = (document.getElementById("product-price").innerText =
+        parseFloat(productPrice));
+      }
+
+      const btn = document.getElementById("parchase-btn");
+  console.log(btn);
+  if (totalPrice > 0) {
+    btn.removeAttribute('disabled')
+  }
+  
+      return product
   }
 
 /* 
@@ -31,13 +49,7 @@ function clickElementValue(target) {
  */
   
 
-  const btn = document.getElementById("parchase-btn");
-  console.log(btn);
-  if (totalPrice > 0) {
-    btn.removeAttribute('disabled')
-  }
-  return product;
-}
+  
 
  document.getElementById('coupon-input').addEventListener('keyup', function(event){
   const couponCode = event.target.value

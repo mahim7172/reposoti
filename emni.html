@@ -380,7 +380,7 @@
                 </div>
                 <div class="modal-action justify-center items-center">
                   <!-- if there is a button in form, it will close the modal -->
-                  <button   class="btn bg-[#E527B2] text-white mt-10">
+                  <button id="go-home"   class="btn bg-[#E527B2] text-white mt-10">
                     Go Home
                   </button>
                 </div>
@@ -391,5 +391,10 @@
       </div>
     </main>
     <script src="./emni.js"></script>
+    <script>
+      document.getElementById('go-home').addEventListener('click', function(){
+        location.reload();
+      })
+    </script>
   </body>
 </html>
